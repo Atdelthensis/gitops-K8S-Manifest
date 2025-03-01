@@ -9,7 +9,7 @@ local mapEnv(obj) =
 local getMapEnv(namespace) = mapEnv(
   {
     'app-prod-18': {
-      PORT: '8080',
+      NEXT_PUBLIC_API_URL: 'https://api-group-18.iamgraph.live',
     },
   }[namespace]
 );

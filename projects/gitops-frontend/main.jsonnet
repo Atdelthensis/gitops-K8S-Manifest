@@ -6,7 +6,7 @@ local vars = import 'vars/vars.json';
 function(
   namespace='app-prod-18',
 )
-  local appName = 'gitops-backend';
+  local appName = 'gitops-frontend';
   local mapEnvVars = env.getMapEnv(namespace);
   local mapSecretVars = secret.getMapSecret(namespace);
   local domain = 'api-group-18.iamgraph.live';
@@ -53,7 +53,7 @@ function(
                 ports: [
                   {
                     name: 'http',
-                    containerPort: 8080,
+                    containerPort: 3000,
                     protocol: 'TCP',
                   },
                 ],
@@ -85,8 +85,8 @@ function(
         ports: [
           {
             name: 'http',
-            port: 8080,
-            targetPort: 8080,
+            port: 3000,
+            targetPort: 3000,
           },
         ],
         selector: {
@@ -120,7 +120,7 @@ function(
                     service: {
                       name: appName,
                       port: {
-                        number: 8080,
+                        number: 3000,
                       },
                     },
                   },
