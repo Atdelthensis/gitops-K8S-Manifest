@@ -16,7 +16,7 @@ local mapSecret(obj) =
 // Function that defines environment variables per namespace
 local getMapSecret(namespace) = mapSecret(
   {
-    'app-prod-19': {
+    'app-prod-18': {
       SECRET_PASSWORD: {
         secret: 'demo-api-secret',
         key: 'password',

@@ -4,12 +4,12 @@ local secret = import 'configs/secret.jsonnet';
 local vars = import 'vars/vars.json';
 
 function(
-  namespace='app-prod-19',
+  namespace='app-prod-18',
 )
   local appName = 'gitops-backend';
   local mapEnvVars = env.getMapEnv(namespace);
   local mapSecretVars = secret.getMapSecret(namespace);
-  local domain = 'api-group-19.iamgraph.live';
+  local domain = 'api-group-18.iamgraph.live';
 
   [
     {

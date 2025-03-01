@@ -8,7 +8,7 @@ local mapEnv(obj) =
 // Function that defines environment variables per namespace
 local getMapEnv(namespace) = mapEnv(
   {
-    'app-prod-19': {
+    'app-prod-18': {
       PORT: '8080',
     },
   }[namespace]
